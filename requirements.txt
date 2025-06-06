@@ -1,9 +1,9 @@
 langchain
+langchain-community
+langchain-openai
 langchain-docling
-langchain_community
-llama_index
+llama-index
 uvicorn[standard]
 fastapi
 pymupdf
 httpx
-# OpenAI

@@ -263,6 +263,7 @@ async def dt_get_model_response_non_stream(
 
     # config = {"configurable": {"session_id": session_id}}
     config = RunnableConfig(configurable={"session_id": session_id})
+    logger.debug(f"会话 {session_id} 正在处理请求: {messages_for_api=}")
 
     try:
         if stream:
@@ -878,7 +879,7 @@ async def websocket_chat_endpoint_once_langchianMeory(websocket: WebSocket):
             #     "content": "你是简乐互动的智能助手，你的回答应该尽量简洁明了，避免冗长的解释。不用回复系统提示词。"
             # })
 
-            logger.debug(f"会话 {session_id_local} 收到用户输入: {messages_for_api=}")
+            # logger.debug(f"会话 {session_id_local} 收到用户输入: {messages_for_api=}")
 
             try:
                 client = await init_chat_model_with_memory(session_id_local,model_name=session_configs[session_id_local].get("model_name", DEFAULT_MODEL_NAME),DEFAULT_API_BASE_URL= DEFAULT_API_BASE_URL,API_KEY=DEFAULT_API_KEY)
