@@ -1,0 +1,9 @@
+langchain
+langchain-docling
+langchain_community
+llama_index
+uvicorn[standard]
+fastapi
+pymupdf
+httpx
+# OpenAI

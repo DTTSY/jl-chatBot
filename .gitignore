@@ -1,0 +1,5 @@
+__pycache__
+*.db
+*.log
+chat_history
+img
